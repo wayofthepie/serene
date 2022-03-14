@@ -1,7 +1,7 @@
 {% extends "_base.html" %}
 
 {% block lang -%}
-{%- set section = get_section(path="blog/_index.md", metadata_only=true) %}
+{%- set section = get_section(path="_index.md", metadata_only=true) %}
 {%- if section.extra.lang %}{{ section.extra.lang }}
 {%- else %}{{ lang }}{% endif %}
 {%- endblock lang %}
@@ -20,7 +20,7 @@
     <div class="title">
         <i class="ri-hashtag"></i>
         <span>{{ term.name }}</span>
-        <a href="{{ config.base_url ~ '/tags' }}">All Tags</a>
+        <a href="{{ '/tags' }}">All Tags</a>
     </div>
     <div class="post-list">
         {% for post in term.pages -%}

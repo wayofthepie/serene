@@ -1,7 +1,7 @@
 {% extends "_base.html" %}
 
 {% block lang -%}
-{% set section = get_section(path="blog/_index.md", metadata_only=true) -%}
+{% set section = get_section(path="_index.md", metadata_only=true) -%}
 {% if page.extra.lang %}{{page.extra.lang}}
 {%- elif section.extra.lang %}{{section.extra.lang}}
 {%- else %}{{page.lang}}
@@ -50,7 +50,7 @@
                 <div class="tags">
                     {% for tag in page.taxonomies.tags -%}
                     {% set tag_slugify = tag | slugify -%}
-                    <a class="tag" href="{{ config.base_url ~ '/tags/' ~ tag_slugify }}"><i class="ri-hashtag ri-sm"></i><span>{{ tag }}</span></a>
+                    <a class="tag" href="{{  '/tags/' ~ tag_slugify }}"><i class="ri-hashtag ri-sm"></i><span>{{ tag }}</span></a>
                     {%- endfor %}
                 </div>
             </div>
