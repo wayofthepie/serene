@@ -67,7 +67,7 @@
                 <i class="ri-alarm-warning-line ri-lg"></i><span></span>
             </blockquote>
             {%- endif %}
-            
+
             {{ page.content | safe }}
 
             {%- set cc = false %}
@@ -83,7 +83,7 @@
             </blockquote>
             {%- endif %}
         </article>
-        
+
         {%- set show_comment = false %}
         {%- if page.extra.show_comment %}
         {%- set show_comment = true %}
@@ -171,7 +171,7 @@
         pageDirection: "{{ config.extra.gitalk.page_direction }}",
         proxy: "{{ config.extra.gitalk.proxy | safe }}"
       });
-    gitalk.render('gitalk-container');      
+    gitalk.render('gitalk-container');
 </script>
 {%- endif %}
 {%- if show_comment and config.extra.comment == "disqus" %}
