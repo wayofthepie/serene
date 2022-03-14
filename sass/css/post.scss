@@ -91,6 +91,12 @@ article {
         }
     }
 
+    a.anchor {
+        position: relative;
+        top: -50px;
+        visibility: hidden;
+    }
+
     img {
         max-width: 100%;
         display: block;
