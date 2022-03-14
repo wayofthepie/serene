@@ -15,7 +15,7 @@ div.blank {
 
 main {
     width: 100%;
-    max-width: 750px;
+    max-width: 1200px;
     min-height: calc(100vh - 230px);
 }
 
@@ -24,7 +24,6 @@ article {
     font-size: var(--paragraph-font-size);
     #post-info {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
         margin-bottom: 1em;
@@ -163,7 +162,7 @@ article {
         text-align: center;
         border: 1px solid var(--primary-light-color);
     }
-    
+
     blockquote.note {
         display: flex;
         line-height: var(--paragraph-line-height);
@@ -269,7 +268,7 @@ aside {
         max-height: 80vh;
         padding-bottom: 30%;
         scrollbar-width: none;
-        &::-webkit-scrollbar { 
+        &::-webkit-scrollbar {
           width: 0;
         }
     }
@@ -306,7 +305,7 @@ aside {
     .toc-h3 {
         color: var(--text-second-color);
     }
-    
+
     #back-to-top {
       padding: 10px 15px;
       text-decoration: none;
