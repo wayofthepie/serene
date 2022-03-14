@@ -394,3 +394,12 @@ body.dark-mode {
         color: var(--dark-text-second-color);
     }
 }
+
+.footnote-definition{
+    p, sup {
+        display: inline;
+    }
+    p {
+        padding-left: 10px;
+    }
+}
