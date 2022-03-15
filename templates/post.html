@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="/css/header.css" />
 <link rel="stylesheet" href="/css/footer.css" />
 <link rel="stylesheet" href="/css/post.css" />
+<link rel="stylesheet" href="/css/common_additions.css" />
 {%- set show_comment = false -%}
 {% if page.extra.show_comment -%}
 {% set show_comment = true -%}
@@ -50,7 +51,7 @@
                 <div class="tags">
                     {% for tag in page.taxonomies.tags -%}
                     {% set tag_slugify = tag | slugify -%}
-                    <a class="tag" href="{{  '/tags/' ~ tag_slugify }}"><i class="ri-hashtag ri-sm"></i><span>{{ tag }}</span></a>
+                    <a class="tag" href="{{  '/tags/' ~ tag_slugify }}"><span>#{{ tag }}</span></a>
                     {%- endfor %}
                 </div>
             </div>
@@ -116,7 +117,7 @@
                     <ul>
                         {%- for h3 in h2.children %}
                         <li>
-                            <a class="toc-h3" href="#{{ h3.id | safe }}">{{ h3.title }}</a>
+                            <div class="high"><a class="toc-h3" href="#{{ h3.id | safe }}">{{ h3.title }}</a></div>
                         </li>
                         {%- endfor %}
                     </ul>

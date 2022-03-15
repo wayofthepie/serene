@@ -283,6 +283,7 @@ aside {
         padding-left: 1.5em;
         margin: 0;
     }
+
     nav a {
         text-decoration: none;
         display: block;
@@ -304,8 +305,7 @@ aside {
             }
         }
     }
-
-    .toc-h2 {
+   .toc-h2 {
         color: var(--primary-color);
     }
     .toc-h3 {
@@ -395,6 +395,8 @@ body.dark-mode {
     }
 }
 
+// Specific additions over the theme.
+
 .footnote-definition{
     p, sup {
         display: inline;
@@ -403,3 +405,4 @@ body.dark-mode {
         padding-left: 10px;
     }
 }
+

@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="/css/blog.css" />
 <link rel="stylesheet" href="/css/header.css" />
 <link rel="stylesheet" href="/css/footer.css" />
+<link rel="stylesheet" href="/css/home_additions.css" />
+<link rel="stylesheet" href="/css/common_additions.css" />
 {%- endblock css %}
 
 {% block content %}
@@ -41,6 +43,14 @@
                 <span>{{ post.title }}</span>
                 <span class="date">{{ post.date | date}}</span>
             </a>
+            <div class="tags">
+                {% for tag in post.taxonomies.tags -%}
+                {% set tag_slugify = tag | slugify -%}
+                <span>
+                    <a class="tag" href="{{  '/tags/' ~ tag_slugify }}"><span>#{{ tag }}</span></a>
+                </span>
+                {%- endfor %}
+            </div>
             {% endfor -%}
             {% if posts | length > section.extra.show_post_num -%}
             <div class="posts-{{category}} hidden">
@@ -53,6 +63,7 @@
             </div>
             <div class="showhidden"><button data-category="{{category}}">More<i class="ri-arrow-down-s-line ri-lg"></i></button></div>
             {% endif -%}
+
         </div>
     {% endfor -%}
 
