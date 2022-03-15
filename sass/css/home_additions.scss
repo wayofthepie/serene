@@ -1,0 +1,23 @@
+main {
+    .tags {
+        margin-bottom: 1em;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 15px;
+    }
+
+    .tag {
+        color: var(--primary-color);
+        border-radius: 4px;
+        text-decoration: none;
+        margin-right: 10px;
+        span {
+            position: relative;
+            top: -3px;
+        }
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}

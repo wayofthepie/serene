@@ -1,0 +1,13 @@
+.tag {
+    color: lightslategray!important;
+    border-radius: 4px;
+    text-decoration: none;
+    span {
+        position: relative;
+        top: -3px;
+    }
+    &:hover {
+        text-decoration: underline !important;
+        cursor: pointer;
+    }
+}
