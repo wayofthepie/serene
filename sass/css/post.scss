@@ -120,7 +120,7 @@ article {
         color: var(--text-light-color);
     }
 
-    p > code {
+    p > code, li > code {
         font-family: var(--code-font);
         font-size: 0.9em;
         padding: 0px 6px;
